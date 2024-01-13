@@ -1,15 +1,16 @@
 const http = require("http");
 
-const server = http.createServer((req, res) => {
-  if ((req.url == "/hello")) {
-    console.log("hello",req.url);
-  }
-  if ((req.url == "/world")) {
-    console.log("world",req.url);
-  }
+function hello(){
+   fetch("http://localhost:3000/",{method:"GET"
+}).then((res)=>{
+    return res.json();
+   }).then((res)=>{
+    console.log(res); 
+   }).catch((err)=>{
+    console.log(err)
+   })
+}
 
-});
+hello()
 
-server.listen(3000, () => {
-  console.log("server is created");
-});
+console.log("first");
