@@ -1,0 +1,11 @@
+.hello{
+   width: 200px;
+   height: 200px;
+   border: 2px solid red;
+   background: fuchsia;
+}
+
+.hello:hover{
+    width: 300px;
+    transition: 2s ease-out;
+}
